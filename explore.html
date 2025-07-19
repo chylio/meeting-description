@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMEE 2025 巴塞隆納行前指南 - 探索巴塞隆納</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-amee-dark-blue p-4 shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <a href="home.html" class="text-white text-2xl font-bold rounded-lg px-3 py-1 hover:bg-amee-light-blue transition-colors duration-300">AMEE 2025</a>
+            <button id="menu-button" class="text-white text-2xl md:hidden focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="nav-links" class="hidden md:flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0 w-full md:w-auto">
+                <a href="home.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">首頁</a>
+                <a href="venue.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">會場與交通</a>
+                <a href="programme.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">會議議程</a>
+                <a href="explore.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">探索巴塞隆納</a>
+                <a href="culinary.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">美食饗宴</a>
+                <a href="practical.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">實用資訊</a>
+                <a href="contact.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">聯繫我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20 container mx-auto p-6">
+        <section id="explore-info" class="bg-white rounded-lg shadow-md p-8 mb-8 animate-fade-in-up">
+            <h2 class="text-4xl font-bold text-amee-dark-blue mb-6">探索巴塞隆納</h2>
+            <p class="text-lg leading-relaxed mb-4">巴塞隆納是一座充滿活力的城市，融合了高第的建築奇蹟、豐富的歷史和迷人的海灘。在會議之餘，不妨探索這座城市的魅力！</p>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
+                <div class="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1579737119853-90d71a171d9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjVtaWQiOjEyMDd9&ixlib=rb-1.2.1&q=80&w=600" 
+                         alt="Sagrada Familia" class="w-full h-48 object-cover" onerror="window.handleImageError(this);">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-amee-dark-blue mb-2">聖家堂 (Sagrada Familia)</h3>
+                        <p class="text-gray-700">高第最著名的作品，預計於 2026 年完工，是巴塞隆納的標誌性建築。</p>
+                        <a href="https://sagradafamilia.org/" target="_blank" class="text-amee-accent-orange hover:underline mt-3 inline-block">了解更多 <i class="fas fa-external-link-alt ml-1 text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1543784196-a19f6a7d7b0d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjVtaWQiOjEyMDd9&ixlib=rb-1.2.1&q=80&w=600" 
+                         alt="Park Güell" class="w-full h-48 object-cover" onerror="window.handleImageError(this);">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-amee-dark-blue mb-2">桂爾公園 (Park Güell)</h3>
+                        <p class="text-gray-700">另一個高第的傑作，色彩繽紛的馬賽克和獨特的建築風格。</p>
+                        <a href="https://www.parkguell.cat/en/" target="_blank" class="text-amee-accent-orange hover:underline mt-3 inline-block">了解更多 <i class="fas fa-external-link-alt ml-1 text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1582239460017-f2732958742b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjVtaWQiOjEyMDd9&ixlib=rb-1.2.1&q=80&w=600" 
+                         alt="Gothic Quarter" class="w-full h-48 object-cover" onerror="window.handleImageError(this);">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-amee-dark-blue mb-2">哥德區 (Gothic Quarter)</h3>
+                        <p class="text-gray-700">巴塞隆納最古老的城區，迷宮般的街道和中世紀建築。</p>
+                        <a href="https://www.barcelonaturisme.com/wv3/en/page/6/barri-gotic.html" target="_blank" class="text-amee-accent-orange hover:underline mt-3 inline-block">了解更多 <i class="fas fa-external-link-alt ml-1 text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1550953684-f3c5b52a1d2e?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjVtaWQiOjEyMDd9&ixlib=rb-1.2.1&q=80&w=600" 
+                         alt="La Rambla" class="w-full h-48 object-cover" onerror="window.handleImageError(this);">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-amee-dark-blue mb-2">蘭布拉大道 (La Rambla)</h3>
+                        <p class="text-gray-700">充滿活力的林蔭大道，有街頭藝人、花卉攤位和市場。</p>
+                        <a href="https://www.barcelonaturisme.com/wv3/en/page/5/la-rambla.html" target="_blank" class="text-amee-accent-orange hover:underline mt-3 inline-block">了解更多 <i class="fas fa-external-link-alt ml-1 text-sm"></i></a>
+                    </div>
+                </div>
+
+                <div class="bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow overflow-hidden">
+                    <img src="https://images.unsplash.com/photo-1549414207-ef037f6943b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjVtaWQiOjEyMDd9&ixlib=rb-1.2.1&q=80&w=600" 
+                         alt="Barceloneta Beach" class="w-full h-48 object-cover" onerror="window.handleImageError(this);">
+                    <div class="p-6">
+                        <h3 class="font-bold text-xl text-amee-dark-blue mb-2">巴塞隆納海灘 (Barceloneta Beach)</h3>
+                        <p class="text-gray-700">市區海灘，適合散步、日光浴或享用海鮮。</p>
+                        <a href="https://www.barcelonaturisme.com/wv3/en/page/24/barceloneta.html" target="_blank" class="text-amee-accent-orange hover:underline mt-3 inline-block">了解更多 <i class="fas fa-external-link-alt ml-1 text-sm"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <p class="mt-8 text-lg">以上僅為巴塞隆納眾多迷人景點的一小部分。建議您提前規劃，充分利用在巴塞隆納的時間！</p>
+        </section>
+    </main>
+
+    <footer class="bg-amee-dark-blue text-white py-6 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2025 AMEE: The International Association For Health Professions Education Ltd. 版權所有。</p>
+            <p class="text-sm mt-2">設計與開發：您的 AI 助手</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
