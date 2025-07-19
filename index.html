@@ -8,147 +8,87 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts - Inter -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <!-- Font Awesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Custom colors based on AMEE website */
-        :root {
-            --amee-blue-dark: #00567a; /* AMEE's primary dark blue/teal */
-            --amee-blue-light: #006699; /* AMEE's slightly lighter blue */
-            --amee-accent-orange: #ff6600; /* AMEE's orange accent */
-        }
-        .bg-amee-dark-blue { background-color: var(--amee-blue-dark); }
-        .hover\:bg-amee-dark-blue-hover:hover { background-color: #004560; }
-        .bg-amee-light-blue { background-color: var(--amee-blue-light); }
-        .hover\:bg-amee-light-blue-hover:hover { background-color: #005a8a; }
-        .text-amee-dark-blue { color: var(--amee-blue-dark); }
-        .text-amee-accent-orange { color: var(--amee-accent-orange); }
-
         body {
             font-family: 'Inter', sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scroll */
+            overflow-x: hidden;
         }
-        .nav-item.active {
-            @apply bg-amee-light-blue text-white;
+        .main-title {
+            font-family: 'Inter', sans-serif;
+            font-weight: 800;
+            color: #065377;
         }
-        /* Custom scrollbar for better aesthetics */
-        ::-webkit-scrollbar {
-            width: 8px;
+        .main-date {
+            color: #065377;
+            font-weight: 700;
         }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
+        .main-btn-red {
+            background-color: #d32a2a;
+            color: #fff;
         }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
+        .main-btn-red:hover {
+            background-color: #b71c1c;
         }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
+        .main-btn-blue {
+            background-color: #036183;
+            color: #fff;
         }
-        /* Animations */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
+        .main-btn-blue:hover {
+            background-color: #02405a;
         }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
+        @media (max-width: 768px) {
+            .main-title { font-size: 2.2rem !important; }
         }
-        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
-        .animate-fade-in { animation: fadeInDown 1s ease-out forwards; }
-        .animate-fade-in-up-delay { animation: fadeInUp 1s ease-out 0.5s forwards; opacity: 0; }
-        .animate-fade-in-up-delay-2 { animation: fadeInUp 1s ease-out 1s forwards; opacity: 0; }
-
-        /* Aspect ratio for iframes */
-        .aspect-w-16 { position: relative; width: 100%; }
-        .aspect-h-9 { padding-bottom: 56.25%; } /* 9/16 = 0.5625 */
-        .aspect-w-16 > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
     </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-white text-gray-800">
+
+    <!-- Logo Banner，logo靠左 -->
+    <header class="w-full bg-white flex items-center justify-start py-6 shadow">
+        <div class="ml-12 md:ml-20">
+            <img src="2025.png" alt="AMEE 2025 BARCELONA Logo" class="max-h-40 w-auto" style="max-width:90%;" />
+        </div>
+    </header>
 
     <!-- Navigation Bar -->
-    <nav class="bg-amee-dark-blue p-4 shadow-lg fixed w-full z-50 top-0">
-        <div class="container mx-auto flex flex-wrap items-center justify-between">
-            <a href="home.html" class="text-white text-2xl font-bold rounded-lg px-3 py-1 hover:bg-amee-light-blue transition-colors duration-300">AMEE 2025</a>
-            <button id="menu-button" class="text-white text-2xl md:hidden focus:outline-none">
-                <i class="fas fa-bars"></i>
-            </button>
-            <div id="nav-links" class="hidden md:flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0 w-full md:w-auto">
-                <a href="index.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center active">首頁</a>
-                <a href="venue.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">會場與交通</a>
-                <a href="programme.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">會議議程</a>
-                <a href="explore.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">探索巴塞隆納</a>
-                <a href="culinary.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">美食饗宴</a>
-                <a href="practical.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">實用資訊</a>
-                <a href="contact.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">聯繫我們</a>
-            </div>
+    <nav class="w-full bg-[#036183] flex flex-wrap items-center px-0 py-4 shadow text-white text-lg font-semibold">
+        <span class="text-2xl font-extrabold ml-8 mr-8 min-w-[160px]">AMEE 2025</span>
+        <div class="flex-1 flex flex-row flex-wrap justify-end gap-10 mr-8">
+            <a href="index.html" class="hover:underline">首頁</a>
+            <a href="venue.html" class="hover:underline">會場與交通</a>
+            <a href="programme.html" class="hover:underline">會議議程</a>
+            <a href="explore.html" class="hover:underline">探索巴塞隆納</a>
+            <a href="culinary.html" class="hover:underline">美食饗宴</a>
+            <a href="practical.html" class="hover:underline">實用資訊</a>
+            <!-- <a href="contact.html" class="hover:underline">聯繫我們</a> -->
         </div>
     </nav>
 
-    <!-- Top Decorative Banner -->
-    <div class="h-64 bg-gray-100 flex items-center justify-center text-gray-400 text-lg overflow-hidden mt-16" style="background-image: url('https://placehold.co/1920x300/F0F8FF/C0D9EE/png?text=Top+Decoration'); background-size: cover; background-position: center;">
-        <!-- You can place a subtle logo or text here if desired -->
-    </div>
-
     <!-- Main Content Section for Home -->
-    <main class="pt-0"> <!-- Adjusted pt-20 to pt-0 as the banner now creates the space -->
-        <section id="home" class="relative h-screen flex items-center justify-center text-gray-800 overflow-hidden bg-white">
-            <!-- Removed background image and overlays, now using solid white from section bg-white -->
-            <div class="relative z-10 text-center p-6 rounded-lg max-w-4xl mx-auto">
-                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 text-amee-dark-blue animate-fade-in-down">AMEE 2025</h1>
-                <p class="text-xl md:text-2xl mb-8 text-gray-700 animate-fade-in">健康專業教育的連結、成長與啟發，盡在巴塞隆納</p>
-                <p class="text-2xl md:text-3xl font-bold mb-10 text-amee-dark-blue animate-fade-in-up-delay">2025 年 8 月 23 日 - 8 月 27 日</p>
-                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up-delay-2">
-                    <a href="programme.html" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center">
-                        <i class="fas fa-calendar-alt mr-2"></i>查看完整議程
-                    </a>
-                    <a href="explore.html" class="bg-amee-light-blue hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center">
-                        <i class="fas fa-map-marker-alt mr-2"></i>巴塞隆納城市指南
-                    </a>
-                </div>
+    <main>
+        <section class="container mx-auto flex flex-col items-center justify-center min-h-[60vh] py-16">
+            <h1 class="main-title text-5xl md:text-6xl mb-3 text-center">AMEE 2025</h1>
+            <p class="text-lg md:text-2xl mb-4 text-center text-gray-700">健康專業教育的連結、成長與啟發，盡在巴塞隆納</p>
+            <p class="main-date text-2xl md:text-3xl mb-8 text-center">2025 年 8 月 23 日 - 8 月 27 日</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-6">
+                <a href="programme.html" class="main-btn-red font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 text-lg text-center mb-3 sm:mb-0">
+                    <i class="fas fa-calendar-alt mr-2"></i>查看完整議程
+                </a>
+                <a href="explore.html" class="main-btn-blue font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 text-lg text-center">
+                    <i class="fas fa-map-marker-alt mr-2"></i>巴塞隆納城市指南
+                </a>
             </div>
         </section>
     </main>
 
-    <!-- Bottom Decorative Banner -->
-    <div class="h-64 bg-gray-100 flex items-center justify-center text-gray-400 text-lg overflow-hidden" style="background-image: url('https://placehold.co/1920x300/F0F8FF/C0D9EE/png?text=Bottom+Decoration'); background-size: cover; background-position: center;">
-        <!-- You can place a subtle logo or text here if desired -->
-    </div>
-
     <!-- Footer -->
-    <footer class="bg-amee-dark-blue text-white py-6 text-center">
+    <footer class="bg-[#036183] text-white py-6 text-center">
         <div class="container mx-auto">
-            <p>&copy; 2025 AMEE: The International Association For Health Professions Education Ltd. 版權所有。</p>
-            <p class="text-sm mt-2">設計與開發：您的 AI 助手</p>
+            <p>&copy; 2025 奇美醫院教學中心</p>
         </div>
     </footer>
 
-    <script>
-        // Global function for image error handling
-        window.handleImageError = function(imageElement, fallbackText = '圖片載入失敗') {
-            imageElement.onerror = null; // Prevent infinite loop
-            imageElement.src = ''; // Clear the broken image src
-            imageElement.alt = fallbackText; // Set alt text
-            imageElement.style.backgroundColor = '#ccc';
-            imageElement.style.display = 'flex';
-            imageElement.style.alignItems = 'center';
-            imageElement.style.justifyContent = 'center';
-            imageElement.style.color = '#666';
-            imageElement.style.fontSize = '1.2rem';
-            imageElement.style.height = 'auto'; // Adjust height
-            imageElement.style.minHeight = '150px'; // Ensure it's visible
-            imageElement.style.width = '100%';
-            imageElement.style.objectFit = 'contain'; // Ensure text is visible
-        };
-
-        // Mobile menu toggle
-        document.getElementById('menu-button').addEventListener('click', function() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('hidden');
-        });
-    </script>
+    <!-- FontAwesome for icons (after body for fast load) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
