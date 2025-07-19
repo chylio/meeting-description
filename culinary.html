@@ -11,7 +11,28 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* ...您的原有CSS... */
+        /* Custom colors based on AMEE website */
+        :root {
+            --amee-blue-dark: #00567a;
+            --amee-blue-light: #006699;
+            --amee-accent-orange: #ff6600;
+        }
+        .bg-amee-dark-blue { background-color: var(--amee-blue-dark); }
+        .hover\:bg-amee-dark-blue-hover:hover { background-color: #004560; }
+        .bg-amee-light-blue { background-color: var(--amee-blue-light); }
+        .hover\:bg-amee-light-blue-hover:hover { background-color: #005a8a; }
+        .text-amee-dark-blue { color: var(--amee-blue-dark); }
+        .text-amee-accent-orange { color: var(--amee-accent-orange); }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .nav-item.active { background-color: var(--amee-blue-light); color: #fff; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+        /* ... 其餘 CSS 不變 ... */
+        .aspect-w-16 { position: relative; width: 100%; }
+        .aspect-h-9 { padding-bottom: 56.25%; }
+        .aspect-w-16 > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -35,10 +56,22 @@
         </div>
     </nav>
 
-    <!-- 其他內容不變 ... -->
-
+    <!-- Main Content Section for Culinary Delights -->
+    <main class="pt-20">
+        <!-- ...內容區塊同您的檔案... -->
+    </main>
+    <footer class="bg-amee-dark-blue text-white py-6 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2025 AMEE: The International Association For Health Professions Education Ltd. 版權所有。</p>
+            <p class="text-sm mt-2">設計與開發：您的 AI 助手</p>
+        </div>
+    </footer>
     <script>
         // ...原有JS...
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('hidden');
+        });
     </script>
 </body>
 </html>
