@@ -96,70 +96,68 @@
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- Paella -->
-                    <div class="bg-yellow-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300 cursor-pointer" onclick="toggleDetails('paella')">
-                        <img src="https://placehold.co/600x400/FFD700/000000?text=Paella" alt="Paella" class="w-full h-48 object-cover" onerror="handleImageError(this, '海鮮燉飯圖片載入失敗');">
+                    <div class="bg-yellow-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                        <!-- Replaced img with iframe for Google Maps -->
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.152872076121287!3d41.39952937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sArrosseria%20X%C3%A0tiva!5e0!3m2!1sen!2stw!4v1701000000005!5m2!1sen!2stw"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold text-yellow-700 mb-2">Paella (海鮮燉飯)</h3>
                             <p class="text-gray-700 mb-4">西班牙國粹，多樣海鮮與香米融合的經典滋味。</p>
-                            <div id="paella-details" class="hidden text-sm text-gray-600">
+                            <!-- Details are now always visible, no toggleDetails function needed -->
+                            <div id="paella-details" class="text-sm text-gray-600">
                                 <p class="mb-2"><i class="fas fa-utensils mr-2"></i>推薦餐廳：Arrosseria Xàtiva (Gràcia 區)</p>
                                 <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>特色：口味地道，選擇多樣</p>
-                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mt-4 shadow-md">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.152872076121287!3d41.39952937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sArrosseria%20X%C3%A0tiva!5e0!3m2!1sen!2stw!4v1701000000005!5m2!1sen!2stw"
-                                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Tapas -->
-                    <div class="bg-orange-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300 cursor-pointer" onclick="toggleDetails('tapas')">
-                        <img src="https://placehold.co/600x400/FF8C00/000000?text=Tapas" alt="Tapas" class="w-full h-48 object-cover" onerror="handleImageError(this, 'Tapas 圖片載入失敗');">
+                    <div class="bg-orange-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.164872076121287!3d41.38852937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sCiudad%20Condal!5e0!3m2!1sen!2stw!4v1701000000006!5m2!1sen!2stw"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold text-orange-700 mb-2">Tapas (西班牙小吃)</h3>
                             <p class="text-gray-700 mb-4">體驗西班牙生活態度，多種小吃隨心組合。</p>
-                            <div id="tapas-details" class="hidden text-sm text-gray-600">
+                            <div id="tapas-details" class="text-sm text-gray-600">
                                 <p class="mb-2"><i class="fas fa-utensils mr-2"></i>推薦餐廳：Ciudad Condal (市中心)</p>
                                 <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>特色：種類豐富，氣氛熱鬧</p>
-                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mt-4 shadow-md">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.164872076121287!3d41.38852937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sCiudad%20Condal!5e0!3m2!1sen!2stw!4v1701000000006!5m2!1sen!2stw"
-                                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- Churros -->
-                    <div class="bg-red-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300 cursor-pointer" onclick="toggleDetails('churros')">
-                        <img src="https://placehold.co/600x400/FF6347/000000?text=Churros" alt="Churros" class="w-full h-48 object-cover" onerror="handleImageError(this, '西班牙油條圖片載入失敗');">
+                    <div class="bg-red-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.173872076121287!3d41.38352937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sGranja%20Dulcinea!5e0!3m2!1sen!2stw!4v1701000000007!5m2!1sen!2stw"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold text-red-700 mb-2">Churros con chocolate</h3>
                             <p class="text-gray-700 mb-4">香脆油條搭配濃郁熱巧克力，完美下午茶或宵夜。</p>
-                            <div id="churros-details" class="hidden text-sm text-gray-600">
+                            <div id="churros-details" class="text-sm text-gray-600">
                                 <p class="mb-2"><i class="fas fa-utensils mr-2"></i>推薦店家：Granja Dulcinea (哥德區)</p>
                                 <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>特色：歷史悠久，巧克力濃郁</p>
-                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mt-4 shadow-md">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.173872076121287!3d41.38352937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sGranja%20Dulcinea!5e0!3m2!1sen!2stw!4v1701000000007!5m2!1sen!2stw"
-                                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
                             </div>
                         </div>
                     </div>
 
                     <!-- La Boqueria Market -->
-                    <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300 cursor-pointer" onclick="toggleDetails('boqueria')">
-                        <img src="https://placehold.co/600x400/87CEEB/FFFFFF?text=La+Boqueria+Market" alt="La Boqueria Market" class="w-full h-48 object-cover" onerror="handleImageError(this, '波蓋利亞市場圖片載入失敗');">
+                    <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.172872076121287!3d41.38152937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sLa%20Boqueria!5e0!3m2!1sen!2stw!4v1701000000008!5m2!1sen!2stw"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
                         <div class="p-6">
                             <h3 class="text-2xl font-semibold text-amee-dark-blue mb-2">波蓋利亞市場 (La Boqueria)</h3>
                             <p class="text-gray-700 mb-4">色彩繽紛的在地市場，品嚐新鮮水果、果汁與各式小吃。</p>
-                            <div id="boqueria-details" class="hidden text-sm text-gray-600">
+                            <div id="boqueria-details" class="text-sm text-gray-600">
                                 <p class="mb-2"><i class="fas fa-store mr-2"></i>開放時間：週一至週六 (請查詢官網最新時間)</p>
                                 <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>特色：新鮮食材，街頭美食</p>
                                 <p class="mb-2"><i class="fas fa-subway mr-2"></i>交通：地鐵 L3 線 Liceu 站</p>
-                                <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden mt-4 shadow-md">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.172872076121287!3d41.38152937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sLa%20Boqueria!5e0!3m2!1sen!2stw!4v1701000000008!5m2!1sen!2stw"
-                                        width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -168,7 +166,7 @@
                 <div class="text-center mt-10 p-4 bg-amee-light-blue rounded-lg shadow-md">
                     <p class="text-lg text-white font-semibold">
                         <i class="fas fa-info-circle mr-2"></i>
-                        提示：點擊美食卡片可查看更多詳細資訊與地圖！
+                        提示：所有美食資訊皆已直接顯示。
                     </p>
                 </div>
             </div>
@@ -201,21 +199,12 @@
             imageElement.style.objectFit = 'contain';
         };
 
-        // Global functions for accordion and toggle details
-        window.toggleDetails = function(id) {
-            const details = document.getElementById(id + '-details');
-            if (details.classList.contains('hidden')) {
-                details.classList.remove('hidden');
-            } else {
-                details.classList.add('hidden');
-            }
-        };
-
         // Mobile menu toggle
         document.getElementById('menu-button').addEventListener('click', function() {
             const navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('hidden');
         });
+        // Removed window.toggleDetails as details are now always visible
     </script>
 </body>
 </html>
