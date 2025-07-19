@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMEE 2025 巴塞隆納行前指南 - 會場與交通</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Custom colors based on AMEE website */
+        :root {
+            --amee-blue-dark: #00567a; /* AMEE's primary dark blue/teal */
+            --amee-blue-light: #006699; /* AMEE's slightly lighter blue */
+            --amee-accent-orange: #ff6600; /* AMEE's orange accent */
+        }
+        .bg-amee-dark-blue { background-color: var(--amee-blue-dark); }
+        .hover\:bg-amee-dark-blue-hover:hover { background-color: #004560; }
+        .bg-amee-light-blue { background-color: var(--amee-blue-light); }
+        .hover\:bg-amee-light-blue-hover:hover { background-color: #005a8a; }
+        .text-amee-dark-blue { color: var(--amee-blue-dark); }
+        .text-amee-accent-orange { color: var(--amee-accent-orange); }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+        .nav-item.active {
+            @apply bg-amee-light-blue text-white;
+        }
+        /* Custom scrollbar for better aesthetics */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #888;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #555;
+        }
+        /* Animations (not directly used in this section, but kept for consistency) */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .animate-fade-in { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up-delay { animation: fadeInUp 1s ease-out 0.5s forwards; opacity: 0; }
+        .animate-fade-in-up-delay-2 { animation: fadeInUp 1s ease-out 1s forwards; opacity: 0; }
+
+        /* Aspect ratio for iframes */
+        .aspect-w-16 { position: relative; width: 100%; }
+        .aspect-h-9 { padding-bottom: 56.25%; } /* 9/16 = 0.5625 */
+        .aspect-w-16 > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    </style>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <!-- Navigation Bar -->
+    <nav class="bg-amee-dark-blue p-4 shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <a href="home.html" class="text-white text-2xl font-bold rounded-lg px-3 py-1 hover:bg-amee-light-blue transition-colors duration-300">AMEE 2025</a>
+            <button id="menu-button" class="text-white text-2xl md:hidden focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="nav-links" class="hidden md:flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0 w-full md:w-auto">
+                <a href="home.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">首頁</a>
+                <a href="venue.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center active">會場與交通</a>
+                <a href="programme.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">會議議程</a>
+                <a href="explore.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">探索巴塞隆納</a>
+                <a href="culinary.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">美食饗宴</a>
+                <a href="practical.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">實用資訊</a>
+                <a href="contact.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">聯繫我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Section for Venue & Travel -->
+    <main class="pt-20">
+        <section id="venue" class="py-12 px-4 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-amee-dark-blue mb-10">您的會議之家：CCIB 與便捷交通</h2>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-12">
+                    <div class="bg-blue-50 p-6 rounded-xl shadow-lg transform transition-transform hover:scale-105 duration-300">
+                        <h3 class="text-3xl font-semibold text-amee-dark-blue mb-4 flex items-center"><i class="fas fa-building mr-3"></i>Centre de Convencions Internacional de Barcelona (CCIB)</h3>
+                        <p class="text-lg mb-4">所有會議議程皆將於巴塞隆納國際會議中心 (CCIB) 舉行。CCIB 位於巴塞隆納海濱，交通便利，設施現代化。</p>
+                        <img src="https://placehold.co/800x450/A0C4FF/000000?text=CCIB+Venue" alt="CCIB Venue" class="rounded-lg shadow-md mb-4 w-full" onerror="handleImageError(this, 'CCIB 場地圖片載入失敗');">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+                            <!-- Google Maps Embed for CCIB -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.515510617304!2d2.219803076121406!3d41.40502127129188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a33118a8f13b%3A0x821c326084a92e10!2sCentre%20de%20Convencions%20Internacional%20de%20Barcelona%20(CCIB)!5e0!3m2!1sen!2stw!4v1701000000000!5m2!1sen!2stw"
+                                width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="bg-green-50 p-6 rounded-xl shadow-lg transform transition-transform hover:scale-105 duration-300">
+                        <h3 class="text-3xl font-semibold text-green-700 mb-4 flex items-center"><i class="fas fa-bus mr-3"></i>便捷交通指南</h3>
+                        <div class="space-y-6">
+                            <div class="flex items-start">
+                                <i class="fas fa-plane text-amee-dark-blue text-3xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-gray-900">從巴塞隆納機場 (BCN) 到 CCIB</h4>
+                                    <p class="text-gray-700">可搭乘地鐵 L9 Sud 線直達，或機場巴士轉地鐵。計程車約 $25-35$ 分鐘。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-train text-amee-accent-orange text-3xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-gray-900">從巴塞隆納桑茲車站 (Sants Estació) 到 CCIB</h4>
+                                    <p class="text-gray-700">搭乘地鐵 L4 線 (黃線) 直達，約 $15-20$ 分鐘。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-subway text-purple-500 text-3xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-gray-900">巴塞隆納地鐵系統</h4>
+                                    <p class="text-gray-700">推薦購買 **T-Casual 票券** ($10$ 次票)，經濟實惠。最近的地鐵站：**El Maresme | Fòrum** (L4 線)。</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start">
+                                <i class="fas fa-taxi text-yellow-500 text-3xl mr-4 mt-1"></i>
+                                <div>
+                                    <h4 class="text-xl font-semibold text-gray-900">計程車與共乘服務</h4>
+                                    <p class="text-gray-700">城市內方便快捷的交通方式，可透過應用程式叫車。</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Weather Widget -->
+                <div class="bg-yellow-50 p-6 rounded-xl shadow-lg text-center mb-12 transform transition-transform hover:scale-105 duration-300">
+                    <h3 class="text-3xl font-semibold text-yellow-700 mb-4 flex items-center justify-center"><i class="fas fa-cloud-sun mr-3"></i>巴塞隆納 $8$ 月天氣預覽</h3>
+                    <p class="text-lg text-gray-700 mb-4">巴塞隆納 $8$ 月通常炎熱且陽光充足，是旅遊旺季。請準備輕便透氣的衣物。</p>
+                    <div id="weather-widget" class="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-md max-w-sm mx-auto">
+                        <p class="text-xl font-bold text-gray-900 mb-2">預計氣溫：$25°C - 30°C$</p>
+                        <p class="text-lg text-gray-700 mb-2">天氣狀況：晴朗，偶有微風</p>
+                        <p class="text-sm text-gray-500">（此為預估資訊，實際天氣請參考當地最新預報）</p>
+                        <div class="text-4xl text-yellow-500 mt-2"><i class="fas fa-sun"></i></div>
+                        <p class="text-sm text-gray-600 mt-4">
+                            <i class="fas fa-info-circle mr-1"></i>
+                            **如何獲取即時天氣：**
+                            <br>
+                            您可以使用天氣應用程式（如 Google Weather, AccuWeather, The Weather Channel）或瀏覽當地氣象網站，輸入「Barcelona, Spain」獲取最新的天氣預報。
+                            <br>
+                            <a href="https://www.google.com/search?q=weather+barcelona" target="_blank" class="text-amee-dark-blue hover:underline">點擊此處查看 Google 天氣預報</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amee-dark-blue text-white py-6 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2025 AMEE: The International Association For Health Professions Education Ltd. 版權所有。</p>
+            <p class="text-sm mt-2">設計與開發：您的 AI 助手</p>
+        </div>
+    </footer>
+
+    <script>
+        // Global function for image error handling
+        window.handleImageError = function(imageElement, fallbackText = '圖片載入失敗') {
+            imageElement.onerror = null;
+            imageElement.src = '';
+            imageElement.alt = fallbackText;
+            imageElement.style.backgroundColor = '#ccc';
+            imageElement.style.display = 'flex';
+            imageElement.style.alignItems = 'center';
+            imageElement.style.justifyContent = 'center';
+            imageElement.style.color = '#666';
+            imageElement.style.fontSize = '1.2rem';
+            imageElement.style.height = 'auto';
+            imageElement.style.minHeight = '150px';
+            imageElement.style.width = '100%';
+            imageElement.style.objectFit = 'contain';
+        };
+
+        // Mobile menu toggle
+        document.getElementById('menu-button').addEventListener('click', function() {
+            const navLinks = document.getElementById('nav-links');
+            navLinks.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>
