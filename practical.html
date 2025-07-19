@@ -1,7 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <!-- ...head區塊同您的檔案... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMEE 2025 巴塞隆納行前指南 - 實用資訊</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --amee-blue-dark: #00567a;
+            --amee-blue-light: #006699;
+            --amee-accent-orange: #ff6600;
+        }
+        .bg-amee-dark-blue { background-color: var(--amee-blue-dark); }
+        .hover\:bg-amee-dark-blue-hover:hover { background-color: #004560; }
+        .bg-amee-light-blue { background-color: var(--amee-blue-light); }
+        .hover\:bg-amee-light-blue-hover:hover { background-color: #005a8a; }
+        .text-amee-dark-blue { color: var(--amee-blue-dark); }
+        .text-amee-accent-orange { color: var(--amee-accent-orange); }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .nav-item.active { background-color: var(--amee-blue-light); color: #fff; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .animate-fade-in { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up-delay { animation: fadeInUp 1s ease-out 0.5s forwards; opacity: 0; }
+        .animate-fade-in-up-delay-2 { animation: fadeInUp 1s ease-out 1s forwards; opacity: 0; }
+        .aspect-w-16 { position: relative; width: 100%; }
+        .aspect-h-9 { padding-bottom: 56.25%; }
+        .aspect-w-16 > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
@@ -26,16 +69,116 @@
 
     <!-- Main Content Section for Practical Info -->
     <main class="pt-20">
-        <!-- ...內容區塊同您的檔案... -->
+        <section id="practical" class="py-12 px-4 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-amee-dark-blue mb-10">行前必讀：您的巴塞隆納實用指南</h2>
+                <div class="max-w-3xl mx-auto space-y-4">
+                    <div class="bg-blue-50 rounded-lg shadow-md overflow-hidden">
+                        <button class="w-full text-left p-4 font-semibold text-xl text-amee-dark-blue flex justify-between items-center" onclick="toggleAccordion('visa')">
+                            <i class="fas fa-passport mr-3"></i>簽證與入境
+                            <i class="fas fa-chevron-down transform transition-transform duration-300" id="visa-icon"></i>
+                        </button>
+                        <div id="visa-content" class="p-4 pt-0 text-gray-700 hidden">
+                            <p class="pb-2">西班牙屬於申根區國家。請確認您的國籍是否需要申根簽證。建議您在出發前至少 $3$ 個月開始辦理簽證手續。</p>
+                            <p>您可以在您所在國家的西班牙領事館或大使館網站上找到詳細的簽證要求資訊。</p>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 rounded-lg shadow-md overflow-hidden">
+                        <button class="w-full text-left p-4 font-semibold text-xl text-green-700 flex justify-between items-center" onclick="toggleAccordion('currency')">
+                            <i class="fas fa-euro-sign mr-3"></i>貨幣與支付
+                            <i class="fas fa-chevron-down transform transition-transform duration-300" id="currency-icon"></i>
+                        </button>
+                        <div id="currency-content" class="p-4 pt-0 text-gray-700 hidden">
+                            <p class="pb-2">西班牙的官方貨幣是歐元 (€)。</p>
+                            <p class="pb-2">大多數商店、餐廳和酒店都接受主要的信用卡（Visa, MasterCard）。建議攜帶少量現金以備不時之需（例如小費、小攤販）。</p>
+                            <p>ATM (cajero automático) 在城市各處都很普遍。</p>
+                        </div>
+                    </div>
+                    <div class="bg-purple-50 rounded-lg shadow-md overflow-hidden">
+                        <button class="w-full text-left p-4 font-semibold text-xl text-purple-700 flex justify-between items-center" onclick="toggleAccordion('customs')">
+                            <i class="fas fa-users mr-3"></i>當地風俗與禮儀
+                            <i class="fas fa-chevron-down transform transition-transform duration-300" id="customs-icon"></i>
+                        </button>
+                        <div id="customs-content" class="p-4 pt-0 text-gray-700 hidden">
+                            <p class="pb-2">用餐時間：西班牙人的晚餐時間通常較晚，一般在晚上 $9$ 點或 $10$ 點之後。午餐則在下午 $2$ 點到 $4$ 點之間。</p>
+                            <p class="pb-2">小費：在西班牙，小費並非強制，但如果您對服務滿意，可以留下 $5-10\%$ 的小費。</p>
+                            <p class="pb-2">問候：握手是常見的問候方式。親近的朋友間可能會行貼面禮（兩頰各親一下）。</p>
+                            <p>語言：巴塞隆納的官方語言是加泰隆尼亞語 (Catalan) 和西班牙語 (Spanish)。在旅遊區，英語通常可以溝通。</p>
+                        </div>
+                    </div>
+                    <div class="bg-red-50 rounded-lg shadow-md overflow-hidden">
+                        <button class="w-full text-left p-4 font-semibold text-xl text-red-700 flex justify-between items-center" onclick="toggleAccordion('emergency')">
+                            <i class="fas fa-exclamation-triangle mr-3"></i>緊急聯絡資訊
+                            <i class="fas fa-chevron-down transform transition-transform duration-300" id="emergency-icon"></i>
+                        </button>
+                        <div id="emergency-content" class="p-4 pt-0 text-gray-700 hidden">
+                            <p class="pb-2">緊急電話：$112$ (適用於警察、消防、救護車)</p>
+                            <p class="pb-2">醫療協助：如果您需要醫療協助，請前往最近的急診室 (Urgencias) 或撥打 $112$。</p>
+                            <p>您的國家駐西班牙大使館/領事館：建議您提前查詢並記下您國家在巴塞隆納或馬德里的大使館或領事館的聯絡方式。</p>
+                        </div>
+                    </div>
+                    <div class="bg-yellow-50 rounded-lg shadow-md overflow-hidden">
+                        <button class="w-full text-left p-4 font-semibold text-xl text-yellow-700 flex justify-between items-center" onclick="toggleAccordion('weather-clothing')">
+                            <i class="fas fa-cloud-sun mr-3"></i>天氣與服裝
+                            <i class="fas fa-chevron-down transform transition-transform duration-300" id="weather-clothing-icon"></i>
+                        </button>
+                        <div id="weather-clothing-content" class="p-4 pt-0 text-gray-700 hidden">
+                            <p class="pb-2">$8$ 月巴塞隆納天氣：通常炎熱且陽光充足，平均氣溫在 $25°C$ 到 $30°C$ 之間，偶爾可能更高。降雨較少。</p>
+                            <p>建議服裝：請準備輕便、透氣的夏季衣物。白天可穿著短袖、短褲或裙子。晚上可能需要一件薄外套。別忘了攜帶防曬霜、太陽眼鏡和帽子。</p>
+                        </div>
+                    </div>
+                    <div class="bg-indigo-50 rounded-lg shadow-md overflow-hidden">
+                        <button class="w-full text-left p-4 font-semibold text-xl text-indigo-700 flex justify-between items-center" onclick="toggleAccordion('power')">
+                            <i class="fas fa-plug mr-3"></i>電源插座
+                            <i class="fas fa-chevron-down transform transition-transform duration-300" id="power-icon"></i>
+                        </button>
+                        <div id="power-content" class="p-4 pt-0 text-gray-700 hidden">
+                            <p class="pb-2">西班牙使用歐洲標準的兩圓孔插座 (Type F 或 Type C)。</p>
+                            <p>電壓為 $230$V，頻率 $50$Hz。請確保您的電子設備與此標準相符，或攜帶合適的轉換插頭。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer class="bg-amee-dark-blue text-white py-6 text-center">
         <div class="container mx-auto">
             <p>&copy; 2025 AMEE: The International Association For Health Professions Education Ltd. 版權所有。</p>
             <p class="text-sm mt-2">設計與開發：您的 AI 助手</p>
         </div>
     </footer>
+
     <script>
-        // ...原有JS...
+        window.handleImageError = function(imageElement, fallbackText = '圖片載入失敗') {
+            imageElement.onerror = null;
+            imageElement.src = '';
+            imageElement.alt = fallbackText;
+            imageElement.style.backgroundColor = '#ccc';
+            imageElement.style.display = 'flex';
+            imageElement.style.alignItems = 'center';
+            imageElement.style.justifyContent = 'center';
+            imageElement.style.color = '#666';
+            imageElement.style.fontSize = '1.2rem';
+            imageElement.style.height = 'auto';
+            imageElement.style.minHeight = '150px';
+            imageElement.style.width = '100%';
+            imageElement.style.objectFit = 'contain';
+        };
+
+        window.toggleAccordion = function(id) {
+            const content = document.getElementById(id + '-content');
+            const icon = document.getElementById(id + '-icon');
+            if (content.classList.contains('hidden')) {
+                content.classList.remove('hidden');
+                icon.classList.add('rotate-180');
+            } else {
+                content.classList.add('hidden');
+                icon.classList.remove('rotate-180');
+            }
+        };
+
         document.getElementById('menu-button').addEventListener('click', function() {
             const navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('hidden');
