@@ -69,7 +69,7 @@
             <h1 class="main-title text-5xl md:text-6xl mb-3 text-center">AMEE 2025</h1>
             <p class="text-lg md:text-2xl mb-4 text-center text-gray-700">健康專業教育的連結、成長與啟發，盡在巴塞隆納</p>
             <p class="main-date text-2xl md:text-3xl mb-8 text-center">2025 年 8 月 23 日 - 8 月 27 日</p>
-            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-6">
+            <div class="flex flex-col sm:flex-row flex-wrap justify-center gap-6 mb-8">
                 <a href="programme.html" class="main-btn-red font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 text-lg text-center">
                     <i class="fas fa-calendar-alt mr-2"></i>會議議程
                 </a>
@@ -77,6 +77,15 @@
                     <i class="fas fa-map-marker-alt mr-2"></i>探索巴塞隆納
                 </a>
             </div>
+
+            <!-- 嵌入Google地圖 -->
+            <div class="w-full max-w-2xl mx-auto mt-6 rounded-lg overflow-hidden shadow-lg border">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.328878197682!2d2.149039276121798!3d41.374908971302756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a498631f5f8f9b%3A0x3e4c4e9f3b0c8a91!2sFira%20Barcelona%20Gran%20Via!5e0!3m2!1szh-TW!2stw!4v1700000000000!5m2!1szh-TW!2stw"
+                    width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+            </div>
+            <div class="mt-2 text-gray-500 text-sm">Fira Barcelona Gran Via 會議中心</div>
         </section>
     </main>
 
@@ -87,7 +96,6 @@
         </div>
     </footer>
 
-    <!-- FontAwesome for icons (after body for fast load) -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
 </body>
 </html>
