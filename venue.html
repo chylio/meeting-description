@@ -61,6 +61,7 @@
                 <a href="explore.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">探索巴塞隆納</a>
                 <a href="culinary.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">美食饗宴</a>
                 <a href="practical.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">實用資訊</a>
+                <a href="contact.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">聯繫我們</a>
             </div>
         </div>
     </nav>
@@ -75,7 +76,6 @@
                     <div class="bg-blue-50 p-6 rounded-xl shadow-lg transform transition-transform hover:scale-105 duration-300">
                         <h3 class="text-3xl font-semibold text-amee-dark-blue mb-4 flex items-center"><i class="fas fa-building mr-3"></i>Centre de Convencions Internacional de Barcelona (CCIB)</h3>
                         <p class="text-lg mb-4">所有會議議程皆將於巴塞隆納國際會議中心 (CCIB) 舉行。CCIB 位於巴塞隆納海濱，交通便利，設施現代化。</p>
-                        <img src="https://placehold.co/800x450/A0C4FF/000000?text=CCIB+Venue" alt="CCIB Venue" class="rounded-lg shadow-md mb-4 w-full" onerror="handleImageError(this, 'CCIB 場地圖片載入失敗');">
                         <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
                             <!-- Google Maps Embed for CCIB -->
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.515510617304!2d2.219803076121406!3d41.40502127129188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a33118a8f13b%3A0x821c326084a92e10!2sCentre%20de%20Convencions%20Internacional%20de%20Barcelona%20(CCIB)!5e0!3m2!1sen!2stw!4v1701000000000!5m2!1sen!2stw"
@@ -150,7 +150,6 @@
     </footer>
 
     <script>
-        // Global function for image error handling
         window.handleImageError = function(imageElement, fallbackText = '圖片載入失敗') {
             imageElement.onerror = null;
             imageElement.src = '';
@@ -166,8 +165,6 @@
             imageElement.style.width = '100%';
             imageElement.style.objectFit = 'contain';
         };
-
-        // Mobile menu toggle
         document.getElementById('menu-button').addEventListener('click', function() {
             const navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('hidden');
