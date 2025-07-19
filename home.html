@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMEE 2025 巴塞隆納行前指南 - 首頁</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/custom.css">
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+    <nav class="bg-amee-dark-blue p-4 shadow-lg fixed w-full z-50 top-0">
+        <div class="container mx-auto flex flex-wrap items-center justify-between">
+            <a href="home.html" class="text-white text-2xl font-bold rounded-lg px-3 py-1 hover:bg-amee-light-blue transition-colors duration-300">AMEE 2025</a>
+            <button id="menu-button" class="text-white text-2xl md:hidden focus:outline-none">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="nav-links" class="hidden md:flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0 w-full md:w-auto">
+                <a href="home.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">首頁</a>
+                <a href="venue.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">會場與交通</a>
+                <a href="programme.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">會議議程</a>
+                <a href="explore.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">探索巴塞隆納</a>
+                <a href="culinary.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">美食饗宴</a>
+                <a href="practical.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">實用資訊</a>
+                <a href="contact.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">聯繫我們</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="pt-20">
+        <section id="home" class="relative h-screen flex items-center justify-center text-white overflow-hidden">
+            <div class="absolute inset-0 bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1534351450181-ea1071850128?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwzNjVtaWQiOjEyMDd9&ixlib=rb-1.2.1&q=80&w=1080');"
+                 onerror="this.style.backgroundImage='none'; this.style.backgroundColor='#ccc'; this.innerHTML='<div class=\'flex items-center justify-center h-full text-gray-600 text-2xl\'>背景圖片載入失敗</div>';">
+                <div class="absolute inset-0 bg-black opacity-40"></div>
+                <div class="absolute inset-0" style="background: radial-gradient(circle at center, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 70%);"></div>
+            </div>
+            <div class="relative z-10 text-center p-6 rounded-lg max-w-4xl mx-auto">
+                <h1 class="text-5xl md:text-7xl font-extrabold mb-4 animate-fade-in-down">AMEE 2025</h1>
+                <p class="text-xl md:text-2xl mb-8 animate-fade-in">健康專業教育的連結、成長與啟發，盡在巴塞隆納</p>
+                <p class="text-2xl md:text-3xl font-bold mb-10 animate-fade-in-up-delay">2025 年 8 月 23 日 - 8 月 27 日</p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6 animate-fade-in-up-delay-2">
+                    <a href="programme.html" class="bg-red-600 hover:bg-red-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center">
+                        <i class="fas fa-calendar-alt mr-2"></i>查看完整議程
+                    </a>
+                    <a href="explore.html" class="bg-amee-light-blue hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center">
+                        <i class="fas fa-map-marker-alt mr-2"></i>巴塞隆納城市指南
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-amee-dark-blue text-white py-6 text-center">
+        <div class="container mx-auto">
+            <p>&copy; 2025 AMEE: The International Association For Health Professions Education Ltd. 版權所有。</p>
+            <p class="text-sm mt-2">設計與開發：您的 AI 助手</p>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
