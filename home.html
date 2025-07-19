@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-Hant">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AMEE 2025 巴塞隆納行前指南 - 首頁</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <link rel="stylesheet" href="css/custom.css">
-   .amee-bottom-center {position: fixed;left: 50%;bottom: 5%;transform: translateX(-50%);z-index: 10;}
+  <meta charset="UTF-8">
+  <title>Meeting Description</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+    }
+    .amee-bottom-center {
+      position: fixed;
+      left: 50%;
+      bottom: 5%;
+      transform: translateX(-50%);
+      z-index: 10;
+      /* 可依需求調整圖片大小與透明度 */
+    }
+    .amee-bottom-center img {
+      max-width: 300px;
+      width: 80vw;
+      height: auto;
+      opacity: 0.85;
+      transition: opacity 0.3s;
+    }
+    .amee-bottom-center img:hover {
+      opacity: 1;
+    }
+  </style>
 </head>
+<body>
 <body class="bg-gray-100 text-gray-800">
 
     <nav class="bg-amee-dark-blue p-4 shadow-lg fixed w-full z-50 top-0">
@@ -51,7 +74,7 @@
             </div>
         </section>
        <div class="amee-bottom-center">
-      <img src="amee.png" alt="amee" style="max-width: 300px; width: 80vw; height: auto; opacity: 0.85;">
+    <img src="amee.png" alt="amee">
     </div> 
     </main>
 
