@@ -1,7 +1,54 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <!-- ...head區塊同您的檔案... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMEE 2025 巴塞隆納行前指南 - 會議議程</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --amee-blue-dark: #00567a;
+            --amee-blue-light: #006699;
+            --amee-accent-orange: #ff6600;
+        }
+        .bg-amee-dark-blue { background-color: var(--amee-blue-dark); }
+        .hover\:bg-amee-dark-blue-hover:hover { background-color: #004560; }
+        .bg-amee-light-blue { background-color: var(--amee-blue-light); }
+        .hover\:bg-amee-light-blue-hover:hover { background-color: #005a8a; }
+        .text-amee-dark-blue { color: var(--amee-blue-dark); }
+        .text-amee-accent-orange { color: var(--amee-accent-orange); }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .nav-item.active { background-color: var(--amee-blue-light); color: #fff; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .animate-fade-in { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up-delay { animation: fadeInUp 1s ease-out 0.5s forwards; opacity: 0; }
+        .animate-fade-in-up-delay-2 { animation: fadeInUp 1s ease-out 1s forwards; opacity: 0; }
+        .aspect-w-16 { position: relative; width: 100%; }
+        .aspect-h-9 { padding-bottom: 56.25%; }
+        .aspect-w-16 > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        .wrap { position: relative; }
+        .border-2-2 { border-width: 2px; }
+        .right-timeline { justify-content: flex-end; }
+        .left-timeline { justify-content: flex-start; }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
@@ -26,16 +73,142 @@
 
     <!-- Main Content Section for Programme -->
     <main class="pt-20">
-        <!-- ...內容區塊同您的檔案... -->
+        <section id="programme" class="py-12 px-4 bg-gray-50">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-amee-dark-blue mb-10">AMEE 2025 完整議程：規劃您的會議之旅</h2>
+
+                <div class="bg-yellow-100 p-6 rounded-xl shadow-md mb-10 text-center border-l-4 border-yellow-500">
+                    <p class="text-xl font-semibold text-yellow-800 leading-normal">
+                        <i class="fas fa-exclamation-circle mr-2"></i>
+                        主要會議從8月24日(週日)的開幕會開始，並持續至8月27日(週三)會議閉幕。
+                    </p>
+                </div>
+
+                <div class="relative wrap overflow-hidden p-10 h-full">
+                    <div class="border-2-2 absolute border-opacity-20 border-gray-700 h-full border" style="left: 50%;"></div>
+
+                    <!-- Event: August 23 -->
+                    <div class="mb-12 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-amee-dark-blue shadow-xl w-8 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">23</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4 transform transition-transform hover:scale-105 duration-300">
+                            <h3 class="mb-3 font-bold text-amee-dark-blue text-xl flex items-center"><i class="fas fa-book mr-2"></i>8 月 23 日 (星期六)：會前工作坊日</h3>
+                            <p class="text-base leading-relaxed tracking-wide text-gray-900 text-opacity-100">
+                                全天註冊 (08:00-17:30)。<br>
+                                上午及下午多場會前工作坊 (主題如：系統性文獻回顧、AI 倫理整合等)。<br>
+                                <span class="font-semibold text-red-600">備註：若無報名工作坊，無需參加。</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event: August 24 -->
+                    <div class="mb-12 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-amee-light-blue shadow-xl w-8 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">24</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4 transform transition-transform hover:scale-105 duration-300">
+                            <h3 class="mb-3 font-bold text-amee-light-blue text-xl flex items-center"><i class="fas fa-handshake mr-2"></i>8 月 24 日 (星期日)：會前工作坊 & 歡迎會</h3>
+                            <p class="text-base leading-relaxed tracking-wide text-gray-900 text-opacity-100">
+                                全天註冊 (08:00-21:30)。<br>
+                                上午及下午工作坊持續進行。<br>
+                                特別標示：首次與會者導向會議 (16:30-17:15)。<br>
+                                <span class="font-bold text-purple-700 text-lg">✨ 歡迎會 ✨ (19:45-21:15) - 絕佳的交流機會！</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event: August 25 -->
+                    <div class="mb-12 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-amee-dark-blue shadow-xl w-8 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">25</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4 transform transition-transform hover:scale-105 duration-300">
+                            <h3 class="mb-3 font-bold text-amee-dark-blue text-xl flex items-center"><i class="fas fa-microphone-alt mr-2"></i>8 月 25 日 (星期一)：主要會議日</h3>
+                            <p class="text-base leading-relaxed tracking-wide text-gray-900 text-opacity-100">
+                                全天註冊 (07:30-17:30)。<br>
+                                多場同步場次 (研討會, 研究論文, 工作坊)。<br>
+                                亮點：主題演講與 ASPIRE-to-Excellence 獎項 (11:00-12:30)。<br>
+                                茶歇與展覽參觀，午餐與展覽參觀。<br>
+                                <br>
+                                <span class="font-bold text-amee-accent-orange text-lg flex items-center mb-0"><i class="fas fa-utensils mr-2"></i>AMEE Taiwan Night 交流晚宴</span><br>
+                                <span class="text-base block leading-normal mt-1">時間：19:00至22:00</span>
+                                <span class="text-base block leading-normal">地點：Barceló Sants Hotel（位於西班牙巴塞隆納，鄰近市中心並連接高鐵、地鐵及機場快線，交通便捷）</span>
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event: August 26 -->
+                    <div class="mb-12 flex justify-between flex-row-reverse items-center w-full left-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-amee-light-blue shadow-xl w-8 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">26</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4 transform transition-transform hover:scale-105 duration-300">
+                            <h3 class="mb-3 font-bold text-amee-light-blue text-xl flex items-center"><i class="fas fa-users mr-2"></i>8 月 26 日 (星期二)：主要會議日</h3>
+                            <p class="text-base leading-relaxed tracking-wide text-gray-900 text-opacity-100">
+                                全天註冊 (07:30-17:30)。<br>
+                                多場同步場次持續進行。<br>
+                                亮點：Patil 教學創新獎項。<br>
+                                茶歇與展覽參觀，午餐與展覽參觀。
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Event: August 27 -->
+                    <div class="mb-12 flex justify-between items-center w-full right-timeline">
+                        <div class="order-1 w-5/12"></div>
+                        <div class="z-20 flex items-center order-1 bg-amee-dark-blue shadow-xl w-8 h-8 rounded-full">
+                            <h1 class="mx-auto font-semibold text-lg text-white">27</h1>
+                        </div>
+                        <div class="order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4 transform transition-transform hover:scale-105 duration-300">
+                            <h3 class="mb-3 font-bold text-amee-dark-blue text-xl flex items-center"><i class="fas fa-award mr-2"></i>8 月 27 日 (星期三)：會議閉幕日</h3>
+                            <p class="text-base leading-relaxed tracking-wide text-gray-900 text-opacity-100">
+                                上午註冊開放 (07:30-13:00)。<br>
+                                上午同步場次。<br>
+                                亮點：主題演講、會議獎項與 AMEE 2025 閉幕式 (11:00-12:30)。<br>
+                                茶歇與最後展覽參觀機會。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center mt-10">
+                    <a href="https://amee.org/" target="_blank" class="bg-amee-dark-blue hover:bg-amee-light-blue text-white font-bold py-3 px-8 rounded-full shadow-lg transition-transform transform hover:scale-105 inline-flex items-center">
+                        <i class="fas fa-globe mr-2"></i>造訪網站
+                    </a>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer class="bg-amee-dark-blue text-white py-6 text-center">
         <div class="container mx-auto">
             <p>&copy; 2025 AMEE: The International Association For Health Professions Education Ltd. 版權所有。</p>
             <p class="text-sm mt-2">設計與開發：您的 AI 助手</p>
         </div>
     </footer>
+
     <script>
-        // ...原有JS...
+        window.handleImageError = function(imageElement, fallbackText = '圖片載入失敗') {
+            imageElement.onerror = null;
+            imageElement.src = '';
+            imageElement.alt = fallbackText;
+            imageElement.style.backgroundColor = '#ccc';
+            imageElement.style.display = 'flex';
+            imageElement.style.alignItems = 'center';
+            imageElement.style.justifyContent = 'center';
+            imageElement.style.color = '#666';
+            imageElement.style.fontSize = '1.2rem';
+            imageElement.style.height = 'auto';
+            imageElement.style.minHeight = '150px';
+            imageElement.style.width = '100%';
+            imageElement.style.objectFit = 'contain';
+        };
         document.getElementById('menu-button').addEventListener('click', function() {
             const navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('hidden');
