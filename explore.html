@@ -1,7 +1,50 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
 <head>
-    <!-- ...head區塊同您的檔案... -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AMEE 2025 巴塞隆納行前指南 - 探索巴塞隆納</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts - Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        :root {
+            --amee-blue-dark: #00567a;
+            --amee-blue-light: #006699;
+            --amee-accent-orange: #ff6600;
+        }
+        .bg-amee-dark-blue { background-color: var(--amee-blue-dark); }
+        .hover\:bg-amee-dark-blue-hover:hover { background-color: #004560; }
+        .bg-amee-light-blue { background-color: var(--amee-blue-light); }
+        .hover\:bg-amee-light-blue-hover:hover { background-color: #005a8a; }
+        .text-amee-dark-blue { color: var(--amee-blue-dark); }
+        .text-amee-accent-orange { color: var(--amee-accent-orange); }
+        body { font-family: 'Inter', sans-serif; overflow-x: hidden; }
+        .nav-item.active { background-color: var(--amee-blue-light); color: #fff; }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb { background: #888; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #555; }
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
+        .animate-fade-in { animation: fadeInDown 1s ease-out forwards; }
+        .animate-fade-in-up-delay { animation: fadeInUp 1s ease-out 0.5s forwards; opacity: 0; }
+        .animate-fade-in-up-delay-2 { animation: fadeInUp 1s ease-out 1s forwards; opacity: 0; }
+        .aspect-w-16 { position: relative; width: 100%; }
+        .aspect-h-9 { padding-bottom: 56.25%; }
+        .aspect-w-16 > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+    </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
 
@@ -26,16 +69,100 @@
 
     <!-- Main Content Section for Explore Barcelona -->
     <main class="pt-20">
-        <!-- ...內容區塊同您的檔案... -->
+        <section id="explore" class="py-12 px-4 bg-white">
+            <div class="container mx-auto">
+                <h2 class="text-4xl font-bold text-center text-amee-dark-blue mb-10">沉浸式體驗：巴塞隆納的文化與藝術瑰寶</h2>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.173872076121287!3d41.40362937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2e6f2441a79%3A0x6b40b171f543a60a!2sSagrada%20Fam%C3%ADlia!5e0!3m2!1sen!2stw!4v1701000000001!5m2!1sen!2stw"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-amee-dark-blue mb-2">聖家堂 (Sagrada Família)</h3>
+                            <p class="text-gray-700 mb-4">高第未完成的傑作，歷經百年仍在建造的宏偉教堂。</p>
+                            <div id="sagrada-details" class="text-sm text-gray-600">
+                                <p class="mb-2"><i class="fas fa-info-circle mr-2"></i>開放時間：每日開放 (請查詢官網最新時間)</p>
+                                <p class="mb-2"><i class="fas fa-ticket-alt mr-2"></i>門票：建議提前線上預訂</p>
+                                <p class="mb-2"><i class="fas fa-subway mr-2"></i>交通：地鐵 L2/L5 線 Sagrada Família 站</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-green-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.515510617304!2d2.152872076121287!3d41.41352937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4980a312d7d7b%3A0x8e8e8e8e8e8e8e8e!2sPark%20G%C3%BCell!5e0!3m2!1sen!2stw!4v1701000000002!5m2!1sen!2stw"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-green-700 mb-2">奎爾公園 (Park Güell)</h3>
+                            <p class="text-gray-700 mb-4">充滿童趣與色彩的奇幻公園，俯瞰城市美景。</p>
+                            <div id="parkguell-details" class="text-sm text-gray-600">
+                                <p class="mb-2"><i class="fas fa-info-circle mr-2"></i>開放時間：每日開放 (請查詢官網最新時間)</p>
+                                <p class="mb-2"><i class="fas fa-ticket-alt mr-2"></i>門票：核心區域需購票</p>
+                                <p class="mb-2"><i class="fas fa-subway mr-2"></i>交通：地鐵 L3 線 Lesseps 或 Vallcarca 站，步行約 $15-20$ 分鐘</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-purple-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.444444444444!2d2.173872076121287!3d41.38242937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sGothic%20Quarter!5e0!3m2!1sen!2stw!4v1701000000003!5m2!1sen!2stw"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-purple-700 mb-2">哥德區 (Gothic Quarter)</h3>
+                            <p class="text-gray-700 mb-4">探索巴塞隆納的古老心臟，迷宮般的巷弄與歷史建築。</p>
+                            <div id="gothic-details" class="text-sm text-gray-600">
+                                <p class="mb-2"><i class="fas fa-info-circle mr-2"></i>開放時間：全天開放</p>
+                                <p class="mb-2"><i class="fas fa-walking mr-2"></i>建議：徒步探索，感受歷史氛圍</p>
+                                <p class="mb-2"><i class="fas fa-subway mr-2"></i>交通：地鐵 L3 線 Liceu 站或 Jaume I 站</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-red-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
+                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.164872076121287!3d41.39352937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sCasa%20Mil%C3%A0%20%26%20Casa%20Batll%C3%B3!5e0!3m2!1sen!2stw!4v1701000000004!5m2!1sen!2stw"
+                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-2xl font-semibold text-red-700 mb-2">米拉之家 & 巴特略之家</h3>
+                            <p class="text-gray-700 mb-4">高第的現代主義建築典範，波浪形外觀與獨特設計。</p>
+                            <div id="casas-details" class="text-sm text-gray-600">
+                                <p class="mb-2"><i class="fas fa-info-circle mr-2"></i>開放時間：每日開放 (請查詢官網最新時間)</p>
+                                <p class="mb-2"><i class="fas fa-ticket-alt mr-2"></i>門票：建議提前線上預訂</p>
+                                <p class="mb-2"><i class="fas fa-subway mr-2"></i>交通：地鐵 L3/L5 線 Diagonal 站 (米拉之家)；地鐵 L2/L3/L4 線 Passeig de Gràcia 站 (巴特略之家)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer class="bg-amee-dark-blue text-white py-6 text-center">
         <div class="container mx-auto">
             <p>&copy; 2025 AMEE: The International Association For Health Professions Education Ltd. 版權所有。</p>
             <p class="text-sm mt-2">設計與開發：您的 AI 助手</p>
         </div>
     </footer>
+
     <script>
-        // ...原有JS...
+        window.handleImageError = function(imageElement, fallbackText = '圖片載入失敗') {
+            imageElement.onerror = null;
+            imageElement.src = '';
+            imageElement.alt = fallbackText;
+            imageElement.style.backgroundColor = '#ccc';
+            imageElement.style.display = 'flex';
+            imageElement.style.alignItems = 'center';
+            imageElement.style.justifyContent = 'center';
+            imageElement.style.color = '#666';
+            imageElement.style.fontSize = '1.2rem';
+            imageElement.style.height = 'auto';
+            imageElement.style.minHeight = '150px';
+            imageElement.style.width = '100%';
+            imageElement.style.objectFit = 'contain';
+        };
         document.getElementById('menu-button').addEventListener('click', function() {
             const navLinks = document.getElementById('nav-links');
             navLinks.classList.toggle('hidden');
