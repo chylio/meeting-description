@@ -11,60 +11,7 @@
     <!-- Font Awesome for icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* Custom colors based on AMEE website */
-        :root {
-            --amee-blue-dark: #00567a; /* AMEE's primary dark blue/teal */
-            --amee-blue-light: #006699; /* AMEE's slightly lighter blue */
-            --amee-accent-orange: #ff6600; /* AMEE's orange accent */
-        }
-        .bg-amee-dark-blue { background-color: var(--amee-blue-dark); }
-        .hover\:bg-amee-dark-blue-hover:hover { background-color: #004560; }
-        .bg-amee-light-blue { background-color: var(--amee-blue-light); }
-        .hover\:bg-amee-light-blue-hover:hover { background-color: #005a8a; }
-        .text-amee-dark-blue { color: var(--amee-blue-dark); }
-        .text-amee-accent-orange { color: var(--amee-accent-orange); }
-
-        body {
-            font-family: 'Inter', sans-serif;
-            overflow-x: hidden; /* Prevent horizontal scroll */
-        }
-        .nav-item.active {
-            @apply bg-amee-light-blue text-white;
-        }
-        /* Custom scrollbar for better aesthetics */
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f1f1;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #888;
-            border-radius: 10px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #555;
-        }
-        /* Animations (not directly used in this section, but kept for consistency) */
-        @keyframes fadeInDown {
-            from { opacity: 0; transform: translateY(-20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        @keyframes fadeInUp {
-            from { opacity: 0; transform: translateY(20px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        .animate-fade-in-down { animation: fadeInDown 1s ease-out forwards; }
-        .animate-fade-in-up { animation: fadeInUp 1s ease-out forwards; }
-        .animate-fade-in { animation: fadeInDown 1s ease-out forwards; }
-        .animate-fade-in-up-delay { animation: fadeInUp 1s ease-out 0.5s forwards; opacity: 0; }
-        .animate-fade-in-up-delay-2 { animation: fadeInUp 1s ease-out 1s forwards; opacity: 0; }
-
-        /* Aspect ratio for iframes */
-        .aspect-w-16 { position: relative; width: 100%; }
-        .aspect-h-9 { padding-bottom: 56.25%; } /* 9/16 = 0.5625 */
-        .aspect-w-16 > iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; }
+        /* ...您的原有CSS... */
     </style>
 </head>
 <body class="bg-gray-100 text-gray-800">
@@ -72,12 +19,12 @@
     <!-- Navigation Bar -->
     <nav class="bg-amee-dark-blue p-4 shadow-lg fixed w-full z-50 top-0">
         <div class="container mx-auto flex flex-wrap items-center justify-between">
-            <a href="home.html" class="text-white text-2xl font-bold rounded-lg px-3 py-1 hover:bg-amee-light-blue transition-colors duration-300">AMEE 2025</a>
+            <a href="index.html" class="text-white text-2xl font-bold rounded-lg px-3 py-1 hover:bg-amee-light-blue transition-colors duration-300">AMEE 2025</a>
             <button id="menu-button" class="text-white text-2xl md:hidden focus:outline-none">
                 <i class="fas fa-bars"></i>
             </button>
             <div id="nav-links" class="hidden md:flex flex-col md:flex-row md:space-x-4 mt-4 md:mt-0 w-full md:w-auto">
-                <a href="home.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">首頁</a>
+                <a href="index.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">首頁</a>
                 <a href="venue.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">會場與交通</a>
                 <a href="programme.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">會議議程</a>
                 <a href="explore.html" class="nav-item p-2 rounded-lg text-white hover:bg-amee-light-blue transition-colors duration-300 text-center">探索巴塞隆納</a>
@@ -88,123 +35,10 @@
         </div>
     </nav>
 
-    <!-- Main Content Section for Culinary Delights -->
-    <main class="pt-20">
-        <section id="culinary" class="py-12 px-4 bg-gray-50">
-            <div class="container mx-auto">
-                <h2 class="text-4xl font-bold text-center text-amee-dark-blue mb-10">味蕾之旅：品味巴塞隆納地道美食</h2>
-
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                    <!-- Paella -->
-                    <div class="bg-yellow-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                        <!-- Replaced img with iframe for Google Maps -->
-                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.152872076121287!3d41.39952937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sArrosseria%20X%C3%A0tiva!5e0!3m2!1sen!2stw!4v1701000000005!5m2!1sen!2stw"
-                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold text-yellow-700 mb-2">Paella (海鮮燉飯)</h3>
-                            <p class="text-gray-700 mb-4">西班牙國粹，多樣海鮮與香米融合的經典滋味。</p>
-                            <!-- Details are now always visible, no toggleDetails function needed -->
-                            <div id="paella-details" class="text-sm text-gray-600">
-                                <p class="mb-2"><i class="fas fa-utensils mr-2"></i>推薦餐廳：Arrosseria Xàtiva (Gràcia 區)</p>
-                                <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>特色：口味地道，選擇多樣</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Tapas -->
-                    <div class="bg-orange-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.164872076121287!3d41.38852937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sCiudad%20Condal!5e0!3m2!1sen!2stw!4v1701000000006!5m2!1sen!2stw"
-                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold text-orange-700 mb-2">Tapas (西班牙小吃)</h3>
-                            <p class="text-gray-700 mb-4">體驗西班牙生活態度，多種小吃隨心組合。</p>
-                            <div id="tapas-details" class="text-sm text-gray-600">
-                                <p class="mb-2"><i class="fas fa-utensils mr-2"></i>推薦餐廳：Ciudad Condal (市中心)</p>
-                                <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>特色：種類豐富，氣氛熱鬧</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Churros -->
-                    <div class="bg-red-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.173872076121287!3d41.38352937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sGranja%20Dulcinea!5e0!3m2!1sen!2stw!4v1701000000007!5m2!1sen!2stw"
-                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold text-red-700 mb-2">Churros con chocolate</h3>
-                            <p class="text-gray-700 mb-4">香脆油條搭配濃郁熱巧克力，完美下午茶或宵夜。</p>
-                            <div id="churros-details" class="text-sm text-gray-600">
-                                <p class="mb-2"><i class="fas fa-utensils mr-2"></i>推薦店家：Granja Dulcinea (哥德區)</p>
-                                <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>特色：歷史悠久，巧克力濃郁</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- La Boqueria Market -->
-                    <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden transform transition-transform hover:scale-105 duration-300">
-                        <div class="aspect-w-16 aspect-h-9 rounded-lg overflow-hidden shadow-md">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2992.839600123516!2d2.172872076121287!3d41.38152937130282!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f2f2f2f2f2%3A0x8e8e8e8e8e8e8e8e!2sLa%20Boqueria!5e0!3m2!1sen!2stw!4v1701000000008!5m2!1sen!2stw"
-                                width="100%" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                        </div>
-                        <div class="p-6">
-                            <h3 class="text-2xl font-semibold text-amee-dark-blue mb-2">波蓋利亞市場 (La Boqueria)</h3>
-                            <p class="text-gray-700 mb-4">色彩繽紛的在地市場，品嚐新鮮水果、果汁與各式小吃。</p>
-                            <div id="boqueria-details" class="text-sm text-gray-600">
-                                <p class="mb-2"><i class="fas fa-store mr-2"></i>開放時間：週一至週六 (請查詢官網最新時間)</p>
-                                <p class="mb-2"><i class="fas fa-map-marker-alt mr-2"></i>特色：新鮮食材，街頭美食</p>
-                                <p class="mb-2"><i class="fas fa-subway mr-2"></i>交通：地鐵 L3 線 Liceu 站</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="text-center mt-10 p-4 bg-amee-light-blue rounded-lg shadow-md">
-                    <p class="text-lg text-white font-semibold">
-                        <i class="fas fa-info-circle mr-2"></i>
-                        提示：所有美食資訊皆已直接顯示。
-                    </p>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- Footer -->
-    <footer class="bg-amee-dark-blue text-white py-6 text-center">
-        <div class="container mx-auto">
-            <p>&copy; 2025 AMEE: The International Association For Health Professions Education Ltd. 版權所有。</p>
-            <p class="text-sm mt-2">設計與開發：您的 AI 助手</p>
-        </div>
-    </footer>
+    <!-- 其他內容不變 ... -->
 
     <script>
-        // Global function for image error handling
-        window.handleImageError = function(imageElement, fallbackText = '圖片載入失敗') {
-            imageElement.onerror = null;
-            imageElement.src = '';
-            imageElement.alt = fallbackText;
-            imageElement.style.backgroundColor = '#ccc';
-            imageElement.style.display = 'flex';
-            imageElement.style.alignItems = 'center';
-            imageElement.style.justifyContent = 'center';
-            imageElement.style.color = '#666';
-            imageElement.style.fontSize = '1.2rem';
-            imageElement.style.height = 'auto';
-            imageElement.style.minHeight = '150px';
-            imageElement.style.width = '100%';
-            imageElement.style.objectFit = 'contain';
-        };
-
-        // Mobile menu toggle
-        document.getElementById('menu-button').addEventListener('click', function() {
-            const navLinks = document.getElementById('nav-links');
-            navLinks.classList.toggle('hidden');
-        });
-        // Removed window.toggleDetails as details are now always visible
+        // ...原有JS...
     </script>
 </body>
 </html>
